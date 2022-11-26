@@ -1,0 +1,36 @@
+<%- include('./shared/header') %>
+<link rel="stylesheet" href="./css/profile.css">
+<title>Sticky Notes</title>
+</head>
+<body>
+
+    <!-- <div class="d-flex w-50 ms-auto bg-info justify-content-end me-3 mt-3" >
+        
+        <img src="<%= profilePic %> " aria-valuenow="<%= profilePic %> " class="w-25 rounded-circle" alt="" srcset="">
+
+</div> -->
+    <div class="text-center mt-5">
+        <a class="btn btn-danger fw-bold" href="/auth/logout">Log Out</a>
+        <h1 class="text-center mt-3">Profile Page</h1>
+
+    </div>
+
+<div class=" d-flex justify-content-center">
+    
+    <div class="form w-50 p-5">
+        <form action="/user/profile/pic" method="POST" enctype="multipart/form-data">
+            <input class="form-control" type="file" name="image">
+            <div class="form-group my-2 d-flex justify-content-center">
+                <button class="btn btn-info my-2 fw-bold" type="submit">upload</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
+
+
+
+
+    <%- include('./shared/footer') %> 
